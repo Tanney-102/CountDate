@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교통비 계산기</title>
+    <link rel="stylesheet" href="./CountDates.css">
+</head>
+<body>
+    <header class="header-back">
+        <h1 class="header">교통비 계산기</h1>
+    </header>
+    <main class="main">
+        <div id="file-input-area" class="cur-page">
+            <h2 class="cur-page-title">파일 올리기 
+                <button id="result-btn" class="top-btn">Result</button>
+            </h2>
+            <div class="file-input-container"> 
+                <label class="file-input">
+                    월별 이용 현황<input type="file" id="main-xlsx-file" class="file-input-form">
+                </label>
+                <label class="file-input">
+                    교통비 미지원<input type="file" id="sub-xlsx-file" class="file-input-form">
+                </label>
+                <span class="file-name">파일이 등록되지 않음</span><span class="file-name">파일이 등록되지 않음</span>
+            </div>
+        </div>
+        <div id="result-area" class="cur-page hide">
+            <h2 class="cur-page-title">결과 확인 
+                <button id="back-btn" class="top-btn">Back</button>
+                <button id="download-btn" class="top-btn">Download</button>
+            </h2>
+            <div class="result-container">
+                <table class="result-table">
+                    <colgroup>
+                        <col class="colg-num">
+                        <col class="colg-name">
+                        <col class="colg-days">
+                        <col span=2 class="colg-other">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <td class="t-head"></td>
+                            <td class="t-head">돌보미명</td>
+                            <td class="t-head">교통비 지원일(일)</td>
+                            <td class="t-head">마스크 지원일(일)</td>
+                            <td class="t-head">마스크 지원 금액(원)</td>
+                        </tr>
+                    </thead>
+                    <tbody id="result-table-b">
+                        <!-- <tr>
+                            <td class="t-body">1</td>
+                            <td class="t-body">돌보미명</td>
+                            <td class="t-body">교통비 일 수</td>
+                            <td class="t-body">마스크 지원일</td>
+                            <td class="t-body">마스크 지원 금액</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+    
+    
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA7PnJ_yi2XLG4VWBOQaqGo6I2jeB2eXx0",
+    authDomain: "gamza-count-days.firebaseapp.com",
+    databaseURL: "https://gamza-count-days.firebaseio.com",
+    projectId: "gamza-count-days",
+    storageBucket: "gamza-count-days.appspot.com",
+    messagingSenderId: "596201081507",
+    appId: "1:596201081507:web:02b8ab2870fa308e344d16",
+    measurementId: "G-6QHC3HLLSR"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<!-- SheetJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+
+<!-- FileSaver -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+
+<!-- CountDates.js -->
+<script src="./CountDates.js"></script>
+</html>

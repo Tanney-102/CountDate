@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+/* CSS Reset */
+html, body, div, p, span, strong, b, em, iframe,
+pre, h1, h2, h3, h4, h5, h6, img, dl, dt, dd, fieldset,
+form, legend, label, table, caption, thead, tbody, tfoot,
+tr, th, td, ul, ol, li, a, input, select, textarea {
+    margin:0;
+    padding:0;
+    border:0 none;
+}
+
+body {
+    font-family:'나눔고딕', NanumGothic, '돋움', Dotum, sans-serif;
+}
+
+ul, ol, li {list-style: none;}
+em, address {font-style: normal;}
+table {border-collapse: collapse; border-spacing:0; }
+th, td { vertical-align: middle;/* white-space: nowrap */}
+a {color: #000; text-decoration: none; line-height: 1;}
+
+.header-back {
+    box-shadow: 3px 0px 3px 1px #bdbdbd;
+}
+
+.header {
+    width:900px;
+    padding:0 40px;
+    margin:0 auto;
+    font-size:25px;
+    line-height:3;
+    color: #4099fa;;
+    font-weight:bold;
+    text-shadow:1px 0px 1px;
+}
+
+.main {
+    width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.cur-page {
+    padding:10px 0;
+}
+
+.cur-page-title {
+    font-size:20px;
+    color:#72b8f6;
+    width: 900px;
+    line-height: 2;
+}
+
+.top-btn {
+    font-size:12px;
+    color:#fbd06c;
+    background-color:rgba(255, 255, 255, 0);
+    border:1px solid #fbd06c;
+    border-radius:10px;
+}
+
+.top-btn:hover {
+    color:#fff;
+    background-color:#fbd06c;
+}
+
+.file-input-container {
+    margin: 10px 0;
+    padding: 70px 170px 150px;
+    border-top:1px solid #d1d1d1;
+    border-bottom:1px solid #d1d1d1;
+    overflow:hidden;
+}
+
+.file-input {
+    display:inline-block;
+    border-radius: 10px;
+    height:170px;
+    width:234px;
+    margin: 10px 20px;
+    text-align:center;
+    text-shadow: 0 0 1px;
+    font-size:25px;
+    font-weight:bold;
+    line-height:170px;
+    color:#f7f7f7;
+    background:#72b8f6;
+
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transition: all 0.15s ease-in-out;
+}
+
+.file-input:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.file-input-form {
+    display:none;
+}
+
+.file-name {
+    display: inline-block;
+    border:1px solid #72b8f6;
+    border-radius: 10px;
+    width:194px;
+    height:30px;
+    margin: 10px 40px;
+    font-size:10px;
+    line-height:30px;
+    text-align:center;
+    color:#7f7f7f;
+}
+
+.result-container {
+    margin: 10px 0;
+    padding: 50px 0px;
+    border-top:1px solid #d1d1d1;
+    border-bottom:1px solid #d1d1d1;
+}
+
+.result-table {
+    border:1px solid #e4e4e4;
+    width:100%;
+    font-size:15px;
+    color:#7f7f7f;
+}
+
+.colg-num {
+    width:30px;
+    text-align: center;
+}
+
+.colg-name {
+    width:250px;
+}
+
+.colg-days {
+    width:150px;
+}
+
+.colg-other {
+    width:235px;
+}
+
+.t-head {
+    border:1px solid #e4e4e4;
+    height:35px;
+    font-weight:bold;
+    text-align: center;
+    padding:0 10px;
+}
+
+.t-body {
+    border:1px solid #e4e4e4;
+    height:30px;
+    padding:0 10px;
+    text-align: center;
+}
+
+.t-body-name {
+    text-align: left;
+}
+
+.text-input {
+    height:30px;
+}
+
+.hide {
+    display:none;
+}
